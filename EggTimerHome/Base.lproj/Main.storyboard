@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EggTimerHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="jeD-ms-JUj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbE-KH-ROI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="mH5-9J-ZdO"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Egg Timer" id="pF8-Dq-NUv">
+                                        <barButtonItem key="leftBarButtonItem" title="Stop" id="dsH-h9-lKg">
+                                            <connections>
+                                                <action selector="stopButton:" destination="BYZ-38-t0r" id="KJs-Ag-lNb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Play" id="qsH-1W-Had">
+                                            <connections>
+                                                <action selector="playButton:" destination="BYZ-38-t0r" id="RKi-mY-92a"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="210" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7C-so-uj3">
+                                <rect key="frame" x="126" y="254" width="123" height="123"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123" id="z0A-h3-pUe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="taj-vH-FRc">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="-10" id="1uY-F4-Lbk">
+                                        <connections>
+                                            <action selector="minusTen:" destination="BYZ-38-t0r" id="vmu-af-eNh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QbP-r6-EGy"/>
+                                    <barButtonItem title="Reset" id="bw4-U1-PsG">
+                                        <connections>
+                                            <action selector="resetTimer:" destination="BYZ-38-t0r" id="frj-Mw-9Rz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="flC-W1-iUo"/>
+                                    <barButtonItem title="+10" id="Vas-xY-NJC">
+                                        <connections>
+                                            <action selector="plusTen:" destination="BYZ-38-t0r" id="Nq5-oh-UHl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="r7C-so-uj3" firstAttribute="centerX" secondItem="cbE-KH-ROI" secondAttribute="centerX" id="076-G5-frg"/>
+                            <constraint firstItem="jeD-ms-JUj" firstAttribute="trailing" secondItem="cbE-KH-ROI" secondAttribute="trailing" id="9fz-1p-DqB"/>
+                            <constraint firstItem="jeD-ms-JUj" firstAttribute="leading" secondItem="taj-vH-FRc" secondAttribute="leading" id="AVu-H8-vId"/>
+                            <constraint firstItem="cbE-KH-ROI" firstAttribute="trailing" secondItem="taj-vH-FRc" secondAttribute="trailing" id="ELM-69-U7d"/>
+                            <constraint firstItem="cbE-KH-ROI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nhs-Th-VSd"/>
+                            <constraint firstAttribute="trailing" secondItem="cbE-KH-ROI" secondAttribute="trailing" id="XNB-Gd-Wmo"/>
+                            <constraint firstItem="jeD-ms-JUj" firstAttribute="bottom" secondItem="taj-vH-FRc" secondAttribute="bottom" id="ZWl-o6-R2Z"/>
+                            <constraint firstItem="jeD-ms-JUj" firstAttribute="top" secondItem="cbE-KH-ROI" secondAttribute="top" id="fLY-rG-4o5"/>
+                            <constraint firstItem="r7C-so-uj3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="khb-6D-L2M"/>
+                            <constraint firstItem="taj-vH-FRc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pIq-GV-hc7"/>
+                            <constraint firstItem="cbE-KH-ROI" firstAttribute="leading" secondItem="taj-vH-FRc" secondAttribute="leading" id="shf-c5-TKZ"/>
+                            <constraint firstItem="r7C-so-uj3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="254" id="w8X-KX-PUv"/>
+                            <constraint firstItem="cbE-KH-ROI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xy2-gK-3gb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="r7C-so-uj3" id="nhZ-1b-wLb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="1000" height="1499"/>
+    </resources>
+</document>
